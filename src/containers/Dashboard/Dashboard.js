@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import * as TodoActions from '../../actions/todoActions';
 
 import Header from '../../components/Header/Header';
+import MainSection from '../../components/MainSection/MainSection';
 
 if (__CLIENT__) {
   require('./Dashboard.scss');
@@ -24,6 +25,7 @@ export default class Dashboard extends React.Component {
     return (
       <div>
         <Header addTodo={actions.addTodo} />
+        <MainSection todos={todos} actions={actions} />
       </div>
     );
   }
