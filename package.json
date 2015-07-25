@@ -1,0 +1,25 @@
+{
+  "name": "react-podio-universal",
+  "version": "1.0.0",
+  "description": "A production ready boilerplate for running a universal javascript app with React, Webpack and Podio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertfdp/react-podio-universal.git"
+  },
+  "keywords": [
+    "react",
+    "podio",
+    "webpack",
+    "universal"
+  ],
+  "author": "Albert Fernández <albert@nandez.cat>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/albertfdp/react-podio-universal/issues"
+  },
+  "homepage": "https://github.com/albertfdp/react-podio-universal#readme"
+}
