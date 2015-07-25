@@ -18,7 +18,7 @@ export function itemToObj(item, fetchRelated=false) {
       console.error('No action for', itemObj.type);
       reject();
     })).then((data) => {
-      resolve(objectAssign(...data));
+      resolve(objectAssign({id: item.item_id}, ...data));
     });
   });
 }
