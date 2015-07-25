@@ -43,6 +43,7 @@
     "compression": "^1.5.1",
     "express": "^4.13.1",
     "http-proxy": "^1.11.1",
+    "jade": "^1.11.0",
     "object-assign": "^3.0.0",
     "react": "^0.13.3",
     "serve-static": "^1.10.0",

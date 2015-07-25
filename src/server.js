@@ -20,6 +20,18 @@ app.use('/api', (req, res) => {
   proxy.web(req, res);
 });
 
+app.set('views', path.join(process.cwd(), 'src', 'views'));
+app.set('view engine', 'jade');
+
+app.use((req, res) => {
+
+  res.render('index', {
+    title: `React Podio Universal`,
+    content: ''
+  });
+
+});
+
 app.listen(config.server.port, (err) => {
   if (err) {
     console.error(err);
