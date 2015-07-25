@@ -1,0 +1,27 @@
+export const LOAD_TODO = 'LOAD_TODO';
+export const LOAD_TODO_SUCCESS = 'LOAD_TODO_SUCCESS';
+export const LOAD_TODO_FAIL = 'LOAD_TODO_FAIL';
+
+export const ADD_TODO = 'ADD_TODO';
+export const ADD_TODO_SUCCESS = 'ADD_TODO_SUCCESS';
+export const ADD_TODO_FAIL = 'ADD_TODO_FAIL';
+
+export const DELETE_TODO = 'DELETE_TODO';
+export const DELETE_TODO_SUCCESS = 'DELETE_TODO_SUCCESS';
+export const DELETE_TODO_FAIL = 'DELETE_TODO_FAIL';
+
+export const EDIT_TODO = 'EDIT_TODO';
+export const EDIT_TODO_SUCCESS = 'EDIT_TODO_SUCCESS';
+export const EDIT_TODO_FAIL = 'EDIT_TODO_FAIL';
+
+export const MARK_TODO = 'MARK_TODO';
+export const MARK_TODO_SUCCESS = 'MARK_TODO_SUCCESS';
+export const MARK_TODO_FAIL = 'MARK_TODO_FAIL';
+
+export const MARK_ALL = 'MARK_ALL';
+export const MARK_ALL_SUCCESS = 'MARK_ALL_SUCCESS';
+export const MARK_ALL_FAIL = 'MARK_ALL_FAIL';
+
+export const CLEAR_MARKED = 'CLEAR_MARKED';
+export const CLEAR_MARKED_SUCCESS = 'CLEAR_MARKED_SUCCESS';
+export const CLEAR_MARKED_FAIL = 'CLEAR_MARKED_FAIL';

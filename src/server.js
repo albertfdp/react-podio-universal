@@ -12,6 +12,8 @@ import createStore from './redux/create';
 import ApiClient from './services/ApiClient';
 import router from './universalRouter';
 
+import api from './api/api';
+
 const app = new Express();
 const proxy = httpProxy.createProxyServer({
   target: config.api.url
@@ -63,7 +65,9 @@ app.listen(config.server.port, (err) => {
   if (err) {
     console.error(err);
   } else {
-    console.info(`==> ✅  Server is listening at ${config.server.port}`);
-    console.info(`==> ✅  API is running on ${config.api.url}`);
+    api().then(() => {
+      console.info(`==> ✅  Server is listening at ${config.server.port}`);
+      console.info(`==> ✅  API is running on ${config.api.url}`);
+    });
   }
 });
