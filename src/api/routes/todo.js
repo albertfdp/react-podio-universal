@@ -11,3 +11,7 @@ export function todo() {
 export function addTodo(req) {
   return actions.createItem(config.podio.apps.todo.app_id, { fields: req.body });
 }
+
+export function deleteTodo(req) {
+  return actions.createItem(config.podio.apps.todo.app_id, { fields: req.body });
+}

@@ -8,5 +8,21 @@ module.exports = {
   },
   webpack: {
     port: 3001
+  },
+  podio: {
+    clientId: '',
+    clientSecret: '',
+    username: '',
+    password: '',
+    apps: {
+      todo: {
+        app_id: '',
+        space_id: '',
+        fields: {
+          text: '',
+          marked: ''
+        }
+      }
+    }
   }
 };
