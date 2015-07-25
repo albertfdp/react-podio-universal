@@ -15,7 +15,7 @@ module.exports = {
 
   output: {
     path: path.join(process.cwd(), 'build'),
-    publicPath: 'http://localhost:3000/src/',
+    publicPath: 'http://localhost:3001/src/',
     filename: '[name].js',
     pathInfo: true
   },

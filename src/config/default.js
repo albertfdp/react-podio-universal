@@ -4,5 +4,8 @@ module.exports = {
   },
   api: {
     url: 'http://0.0.0.0:9090'
+  },
+  webpack: {
+    port: 3001
   }
 };

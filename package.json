@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start-dev": "NODE_ENV=development ./node_modules/.bin/babel-node index.js",
-    "dev-server": "NODE_ENV=development ./node_modules/.bin/babel-node webpack/dev-server.config.js"
+    "webpack-dev": "NODE_ENV=development ./node_modules/.bin/babel-node webpack/dev-server.config.js",
+    "scaffold": "./node_modules/.bin/babel-node scaffolder.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "autoprefixer-loader": "^2.0.0",
     "babel": "^5.8.5",
     "babel-core": "^5.8.5",
+    "babel-eslint": "^3.1.26",
     "babel-loader": "^5.3.2",
     "css-loader": "^0.15.5",
     "eslint": "^0.24.1",
@@ -46,7 +48,12 @@
     "jade": "^1.11.0",
     "object-assign": "^3.0.0",
     "react": "^0.13.3",
+    "react-redux": "^0.2.2",
+    "react-router": "^1.0.0-beta2",
+    "redux": "^1.0.0-rc",
+    "serialize-javascript": "^1.0.0",
     "serve-static": "^1.10.0",
+    "superagent": "^1.2.0",
     "webpack": "^1.10.5"
   }
 }

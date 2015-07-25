@@ -5,7 +5,7 @@ var config = require('./base.config');
 module.exports = objectAssign(config, {
 
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
+    'webpack-dev-server/client?http://localhost:3001',
     'webpack/hot/dev-server',
     config.entry
   ],
