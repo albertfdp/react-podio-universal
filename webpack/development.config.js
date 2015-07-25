@@ -21,7 +21,7 @@ module.exports = objectAssign(config, {
   module: objectAssign(config.module, {
     loaders: config.module.loaders.concat([
       { test: /\.jsx?$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
-      { test: /\.scss$/, loader: 'style!css!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded'}
+      { test: /\.scss$|\.css$/, loader: 'style!css!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded'}
     ])
   })
 

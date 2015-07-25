@@ -18,6 +18,10 @@ export function getFile(fileId) {
   return platform.request('get', `/file/${fileId}/raw`);
 }
 
+export function createItem(appId, attributes) {
+  return platform.request('post', `/item/app/${appId}`, attributes);
+}
+
 export function getItem(itemId) {
   return new Promise((resolve, reject) => {
     platform.request('get', `/item/${itemId}`).then((data) => {

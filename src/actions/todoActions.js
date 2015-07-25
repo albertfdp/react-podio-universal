@@ -17,7 +17,7 @@ export function load() {
 export function addTodo(text) {
   return {
     types: [ADD_TODO, ADD_TODO_SUCCESS, ADD_TODO_FAIL],
-    promise: (client) => client.post('/todo', {
+    promise: (client) => client.post('/addTodo', {
       data: {
         text
       }

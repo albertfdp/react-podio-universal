@@ -1,13 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as todoActions from '../../actions/todoActions';
+import { bindActionCreators } from 'redux';
+import * as TodoActions from '../../actions/todoActions';
+
+import Header from '../../components/Header/Header';
 
 if (__CLIENT__) {
   require('./Dashboard.scss');
 }
 
 @connect(state => ({
-  todo: state.todo.data
+  todos: state.todo.data
 }))
 export default class Dashboard extends React.Component {
 
@@ -16,20 +19,23 @@ export default class Dashboard extends React.Component {
   }
 
   render() {
-    const { todo } = this.props;
+    const { todos, dispatch } = this.props;
+    const actions = bindActionCreators(TodoActions, dispatch);
     return (
-      <div className="dashboard">
-        <h1>Component Dashboard</h1><small>it works!</small>
-        <div>todo: {todo.message}</div>
+      <div>
+        <Header addTodo={actions.addTodo} />
       </div>
     );
   }
 
   static fetchData(store) {
-    return store.dispatch(todoActions.load());
+    return store.dispatch(TodoActions.load());
   }
 
 }
 
-Dashboard.proptypes = {};
+Dashboard.proptypes = {
+  todos: React.PropTypes.object,
+  dispatch: React.PropTypes.func.isRequired
+};
 Dashboard.defaultProps = {};

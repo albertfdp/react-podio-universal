@@ -5,6 +5,10 @@ import createStore from './redux/create';
 import ApiClient from './services/ApiClient';
 import universalRouter from './universalRouter';
 
+if (__CLIENT__) {
+  require('todomvc-app-css/index.css');
+}
+
 const history = new BrowserHistory();
 const client = new ApiClient();
 
