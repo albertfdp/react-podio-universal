@@ -13,5 +13,7 @@ export function addTodo(req) {
 }
 
 export function deleteTodo(req) {
-  return actions.createItem(config.podio.apps.todo.app_id, { fields: req.body });
+  return actions.deleteItem(req.body.id).then(() => {
+    return req.body.id; // we need to tell the reducer what to remove from the list
+  });
 }

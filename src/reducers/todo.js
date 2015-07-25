@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import {
   LOAD_TODO,
   LOAD_TODO_SUCCESS,
@@ -11,7 +12,8 @@ import {
 } from '../constants/ActionTypes';
 
 const initialState = {
-  loaded: false
+  loaded: false,
+  todos: []
 };
 
 export default function todo(state = initialState, action = {}) {
@@ -26,7 +28,7 @@ export default function todo(state = initialState, action = {}) {
         ...state,
         loading: false,
         loaded: true,
-        data: action.result
+        todos: action.result
       };
     case LOAD_TODO_FAIL:
       return {
@@ -42,16 +44,30 @@ export default function todo(state = initialState, action = {}) {
       };
     case ADD_TODO_SUCCESS:
       return {
-        ...state,
         loading: false,
-        loaded: true,
-        data: action.result
+        todos: [action.result, ...state.todos]
       };
     case ADD_TODO_FAIL:
       return {
         ...state,
         loading: false,
-        loaded: false,
+        error: action.error
+      };
+    case DELETE_TODO:
+      return {
+        ...state,
+        loading: true
+      };
+    case DELETE_TODO_SUCCESS:
+      debugger;
+      return {
+        loading: false,
+        todos: _.reject(state.todos, { id: action.result})
+      };
+    case DELETE_TODO_FAIL:
+      return {
+        ...state,
+        loading: false,
         error: action.error
       };
     default:

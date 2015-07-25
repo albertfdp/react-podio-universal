@@ -28,10 +28,10 @@ export function addTodo(text) {
   };
 }
 
-export function deleteTodo(text) {
+export function deleteTodo(id) {
   return {
     types: [DELETE_TODO, DELETE_TODO_SUCCESS, DELETE_TODO_FAIL],
-    promise: (client) => client.delete('/deleteTodo', {
+    promise: (client) => client.del('/deleteTodo', {
       data: {
         id
       }

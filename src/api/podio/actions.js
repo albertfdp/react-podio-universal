@@ -19,7 +19,15 @@ export function getFile(fileId) {
 }
 
 export function createItem(appId, attributes) {
-  return platform.request('post', `/item/app/${appId}`, attributes);
+  return new Promise((resolve) => {
+    platform.request('post', `/item/app/${appId}`, attributes).then((data) => {
+      resolve(items.itemToObj(data));
+    });
+  });
+}
+
+export function deleteItem(itemId) {
+  return platform.request('delete', `/item/${itemId}`);
 }
 
 export function getItem(itemId) {

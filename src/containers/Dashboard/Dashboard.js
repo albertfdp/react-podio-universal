@@ -11,7 +11,7 @@ if (__CLIENT__) {
 }
 
 @connect(state => ({
-  todos: state.todo.data
+  todos: state.todo.todos
 }))
 export default class Dashboard extends React.Component {
 
