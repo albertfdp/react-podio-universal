@@ -48,6 +48,7 @@
     "express-session": "^1.11.3",
     "http-proxy": "^1.11.1",
     "jade": "^1.11.0",
+    "lodash": "^3.10.0",
     "object-assign": "^3.0.0",
     "podio-js": "^1.2.0",
     "react": "^0.13.3",

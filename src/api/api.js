@@ -31,7 +31,7 @@ export default function api() {
           handleRequest(req, res, action, matcher);
         }).catch((err) => {
           // TODO: this is the 1st iteration. It will change to client or server auth
-          platform.authenticateWithCredentials(config.podio.username, config.podio.password, () => {
+          platform.authenticateWithCredentialsForOffering(config.podio.username, config.podio.password, 1, () => {
             handleRequest(req, res, action, matcher);
           });
         })
