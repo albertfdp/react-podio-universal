@@ -40,7 +40,9 @@ WIP
 
 ## Disclaimer
 
-This is still WIP, so there are a few corners that were cut (i.e. authentication).
+This is still WIP, so there are a few corners that were cut like:
+  * podio server|client authentication
+  * bootstraping podio apps on first login
 
 ## License
 
