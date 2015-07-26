@@ -7,13 +7,13 @@ import Header from '../../components/Header/Header';
 import MainSection from '../../components/MainSection/MainSection';
 
 if (__CLIENT__) {
-  require('./Dashboard.scss');
+  require('./TodoApp.scss');
 }
 
 @connect(state => ({
   todos: state.todo.todos
 }))
-export default class Dashboard extends React.Component {
+export default class TodoApp extends React.Component {
 
   constructor(props) {
     super(props);
@@ -36,8 +36,8 @@ export default class Dashboard extends React.Component {
 
 }
 
-Dashboard.proptypes = {
+TodoApp.proptypes = {
   todos: React.PropTypes.object,
   dispatch: React.PropTypes.func.isRequired
 };
-Dashboard.defaultProps = {};
+TodoApp.defaultProps = {};
