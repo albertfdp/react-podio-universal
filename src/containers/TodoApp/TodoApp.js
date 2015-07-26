@@ -23,10 +23,10 @@ export default class TodoApp extends React.Component {
     const { todos, dispatch } = this.props;
     const actions = bindActionCreators(TodoActions, dispatch);
     return (
-      <div>
+      <section className="todoapp">
         <Header addTodo={actions.addTodo} />
         <MainSection todos={todos} actions={actions} />
-      </div>
+      </section>
     );
   }
 
