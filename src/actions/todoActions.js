@@ -10,7 +10,13 @@ import {
   DELETE_TODO_FAIL,
   EDIT_TODO,
   EDIT_TODO_SUCCESS,
-  EDIT_TODO_FAIL
+  EDIT_TODO_FAIL,
+  MARK_ALL,
+  MARK_ALL_SUCCESS,
+  MARK_ALL_FAIL,
+  CLEAR_ALL,
+  CLEAR_ALL_SUCCESS,
+  CLEAR_ALL_FAIL
 } from '../constants/ActionTypes';
 
 export function load() {
@@ -68,14 +74,14 @@ export function markTodo(id, marked) {
 
 export function markAll() {
   return {
-    types: [EDIT_TODO, EDIT_TODO_SUCCESS, EDIT_TODO_FAIL],
+    types: [MARK_ALL, MARK_ALL_SUCCESS, MARK_ALL_FAIL],
     promise: (client) => client.post('/markAll')
   };
 }
 
 export function clearMarked() {
   return {
-    types: [EDIT_TODO, EDIT_TODO_SUCCESS, EDIT_TODO_FAIL],
+    types: [CLEAR_ALL, CLEAR_ALL_SUCCESS, CLEAR_ALL_FAIL],
     promise: (client) => client.post('/clearMarked')
   };
 }

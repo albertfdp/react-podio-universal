@@ -12,6 +12,26 @@ export function addTodo(req) {
   return actions.createItem(config.podio.apps.todo.app_id, { fields: req.body });
 }
 
+function updateMarkToAll(mark) {
+  return new Promise((resolve, reject) => {
+    todo().then((items) => { // TODO: instead of querying for all items, why not only those with marked == mark?
+      Promise.all(items.map((item) => {
+        return actions.updateItem(item.id, { marked: mark });
+      })).then((data) => {
+        resolve();
+      });
+    });
+  });
+}
+
+export function markAll(req) {
+  return updateMarkToAll('true');
+}
+
+export function clearMarked(req) {
+  return updateMarkToAll('false');
+}
+
 export function editTodo(req) {
   let itemId = req.body.id;
   let data = req.body;

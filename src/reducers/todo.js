@@ -8,7 +8,9 @@ import {
   DELETE_TODO_SUCCESS,
   DELETE_TODO_FAIL,
   EDIT_TODO_SUCCESS,
-  EDIT_TODO_FAIL
+  EDIT_TODO_FAIL,
+  MARK_ALL_SUCCESS,
+  CLEAR_ALL_SUCCESS
 } from '../constants/ActionTypes';
 
 const initialState = {
@@ -60,8 +62,8 @@ export default function todo(state = initialState, action = {}) {
     case EDIT_TODO_SUCCESS:
       return {
         ...state,
-        todos: state.todos.map((todo) => {
-          return (todo.id === action.result.id) ? { ...todo, ...action.result } : todo;
+        todos: state.todos.map((_todo) => {
+          return (_todo.id === action.result.id) ? { ..._todo, ...action.result } : _todo;
         })
       };
     case EDIT_TODO_FAIL:
@@ -69,6 +71,20 @@ export default function todo(state = initialState, action = {}) {
         ...state,
         loading: false,
         error: action.error
+      };
+    case MARK_ALL_SUCCESS:
+      return {
+        ...state,
+        todos: state.todos.map((_todo) => {
+          return { ..._todo, marked: 'true'};
+        })
+      };
+    case CLEAR_ALL_SUCCESS:
+      return {
+        ...state,
+        todos: state.todos.map((_todo) => {
+          return { ..._todo, marked: 'false'};
+        })
       };
     default:
       return state;
