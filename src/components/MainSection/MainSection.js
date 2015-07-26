@@ -28,7 +28,7 @@ export default class MainSection extends React.Component {
 
     const filteredTodos = todos.filter(TODO_FILTERS[filter]);
     const markedCount = todos.reduce((count, todo) =>
-      todo.marked ? count + 1 : count,
+      todo.marked === 'true' ? count + 1 : count,
       0
     );
 
