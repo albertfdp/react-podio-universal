@@ -18,6 +18,10 @@ The stack is the following:
 
 If you want to prototype web apps using the bleeding edge web technologies, supported by an out-of-the-box backend, you probably should take a look at this repo. PR and issues, are more than welcome :)
 
+## Demo
+
+[![Screenshot](https://raw.githubusercontent.com/albertfdp/react-podio-universal/master/docs/demo.png)](https://www.youtube.com/watch?v=NWdK5q9Ow2c&feature=youtu.be)
+
 ## Installation
 
 ```sh
