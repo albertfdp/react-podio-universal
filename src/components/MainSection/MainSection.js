@@ -51,7 +51,7 @@ export default class MainSection extends React.Component {
       return (
         <input className='toggle-all' type='checkbox'
           checked={markedCount === todos.length} onChange={actions.markAll} />
-      )
+      );
     }
   }
 

@@ -26,6 +26,11 @@ export function createItem(appId, attributes) {
   });
 }
 
+export function updateItem(itemId, attributes) {
+  delete attributes.id;
+  return platform.request('put', `/item/${itemId}`, { fields: attributes });
+}
+
 export function deleteItem(itemId) {
   return platform.request('delete', `/item/${itemId}`);
 }

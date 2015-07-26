@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import TodoTextInput from '../TodoTextInput/TodoTextInput';
 import classnames from 'classnames';
 
 if (__CLIENT__) {
