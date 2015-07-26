@@ -61,7 +61,7 @@ export default function todo(state = initialState, action = {}) {
       return {
         ...state,
         todos: state.todos.map((todo) => {
-          return (todo.id === action.result.id) ? { ...todo, text: action.result.text } : todo
+          return (todo.id === action.result.id) ? { ...todo, ...action.result } : todo;
         })
       };
     case EDIT_TODO_FAIL:

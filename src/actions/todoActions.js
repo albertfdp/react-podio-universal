@@ -54,13 +54,13 @@ export function editTodo(id, text) {
   };
 }
 
-export function markTodo(id, mark) {
+export function markTodo(id, marked) {
   return {
     types: [EDIT_TODO, EDIT_TODO_SUCCESS, EDIT_TODO_FAIL],
     promise: (client) => client.put('/editTodo', {
       data: {
         id,
-        mark
+        marked: (marked === 'true' ? 'false' : 'true')
       }
     })
   };
@@ -68,7 +68,7 @@ export function markTodo(id, mark) {
 
 export function markAll() {
   return {
-    types: [MARK_TODO, EDIT_TODO_SUCCESS, EDIT_TODO_FAIL],
+    types: [EDIT_TODO, EDIT_TODO_SUCCESS, EDIT_TODO_FAIL],
     promise: (client) => client.post('/markAll')
   };
 }

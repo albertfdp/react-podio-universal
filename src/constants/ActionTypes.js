@@ -14,10 +14,6 @@ export const EDIT_TODO = 'EDIT_TODO';
 export const EDIT_TODO_SUCCESS = 'EDIT_TODO_SUCCESS';
 export const EDIT_TODO_FAIL = 'EDIT_TODO_FAIL';
 
-export const MARK_TODO = 'MARK_TODO';
-export const MARK_TODO_SUCCESS = 'MARK_TODO_SUCCESS';
-export const MARK_TODO_FAIL = 'MARK_TODO_FAIL';
-
 export const MARK_ALL = 'MARK_ALL';
 export const MARK_ALL_SUCCESS = 'MARK_ALL_SUCCESS';
 export const MARK_ALL_FAIL = 'MARK_ALL_FAIL';

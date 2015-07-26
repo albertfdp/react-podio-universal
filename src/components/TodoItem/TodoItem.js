@@ -27,8 +27,8 @@ export default class TodoItem extends React.Component {
     } else {
       element = (
         <div className='view'>
-          <input className='toggle' type='checkbox' checked={todo.marked}
-            onChange={() => markTodo(todo.id)} />
+          <input className='toggle' type='checkbox' checked={todo.marked === 'true'}
+            onChange={() => markTodo(todo.id, todo.marked)} />
           <label onDoubleClick={::this.handleDoubleClick}>
             {todo.text}
           </label>
@@ -40,7 +40,7 @@ export default class TodoItem extends React.Component {
     return (
       <li className={
         classnames({
-          completed: todo.marked,
+          completed: todo.marked === 'true',
           editing: this.state.editing
         })}>
         {element}
