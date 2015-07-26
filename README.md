@@ -14,6 +14,7 @@ The stack is the following:
   * [React Hot Loader](https://github.com/gaearon/react-hot-loader)
   * [Redux](https://github.com/gaearon/redux)
   * [Redux Dev Tools](https://github.com/gaearon/redux-devtools)
+  * [Podio Platform](https://platform.podio.com)
 
 If you want to prototype web apps using the bleeding edge web technologies, supported by an out-of-the-box backend, you probably should take a look at this repo. PR and issues, are more than welcome :)
 
