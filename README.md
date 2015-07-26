@@ -26,8 +26,11 @@ $ npm install
 ## Development
 
 ```sh
-$ npm run start-dev # start express server
-$ npm run webpack-dev # start webpack development server
+# start express server
+$ npm run start-dev
+
+# start webpack development server
+$ npm run webpack-dev
 ```
 
 ## Production
