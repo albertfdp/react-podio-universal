@@ -36,7 +36,8 @@ module.exports = {
       __PRODUCTION__: env.production,
       __CURRENT_ENV__: "'" + (process.env.NODE_ENV) + "'",
       __CLIENT__: true,
-      __SERVER__: false
+      __SERVER__: false,
+      __DEVTOOLS__: env.development
     })
   ],
 

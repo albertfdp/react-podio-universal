@@ -20,6 +20,8 @@
   "globals": {
     "__DEV__": true,
     "__CLIENT__": true,
-    "__SERVER__": true
+    "__SERVER__": true,
+    "__PRODUCTION__": true,
+    "__DEVTOOLS__": true,
   }
 }
